@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<form method='POST'>
+    
+    <label> User Name: 
+        <input  type="text" name="username" max_length="20" min_length="3" value='{{username}}'/>
+    </label>
+    <span class="error"> {{username_error}}</span>
+    <br>
+
+    <label> Password: 
+        <input type="password" name="password" />
+    </label>
+    <span class = "error">{{password_error}}</span>
+    <br>
+
+    <label> Confirm Password: 
+        <input type ="password" name="password_verify" />
+    </label>
+        <span class = "error"> {{password_verify_error}} </span>
+    <br>
+
+    <label > Email Address: (optional) 
+            <input type="text" name="email" value='{{email}}' />
+        </label>
+        <span class = "error">{{email_error}}</span>
+        <br>
+
+    <input type="submit" value="Log In"/>
+    
+</form>
+
+{% endblock %}s
