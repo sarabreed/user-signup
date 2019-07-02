@@ -26,6 +26,8 @@ def validate_email(email):
         valid = False
     if ' ' in email or '@' not in email or '.' not in email:
         valid = False
+    if len(email) ==0:
+        valid = True
     return valid
 
 @app.route("/", methods = ['POST'])
